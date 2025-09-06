@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keanu Niccolo Sison - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background: #f9fafb;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .cv-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #111827;
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header-text h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header-text h2 {
+            font-size: 1.3em;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9em;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .value-proposition {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 40px;
+            text-align: center;
+            border-left: 4px solid #111827;
+        }
+        
+        .value-proposition h3 {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+        
+        .value-proposition p {
+            font-size: 1.1em;
+            line-height: 1.7;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            color: #111827;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .skill-category {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 4px;
+            border-left: 3px solid #6b7280;
+        }
+        
+        .skill-category h4 {
+            color: #111827;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 5px 0;
+            color: #6b7280;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .skill-category li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 12px;
+            width: 6px;
+            height: 6px;
+            background: #9ca3af;
+            border-radius: 50%;
+        }
+        
+        .experience-item {
+            background: #f9fafb;
+            padding: 30px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            border-left: 3px solid #9ca3af;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .experience-title h3 {
+            color: #111827;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        
+        .experience-title h4 {
+            color: #6b7280;
+            font-size: 1em;
+            font-weight: 500;
+        }
+        
+        .experience-date {
+            background: #6b7280;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 12px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .achievements {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .achievements li {
+            padding: 8px 0;
+            color: #6b7280;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .achievements li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 6px;
+            height: 6px;
+            background: #9ca3af;
+            border-radius: 50%;
+        }
+        
+        .education {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 25px;
+            border-radius: 4px;
+            border-left: 4px solid #111827;
+        }
+        
+        .education h4 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        .highlight {
+            background: #f3f4f6;
+            color: #374151;
+            padding: 25px;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 30px;
+            border-left: 4px solid #111827;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-info {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header class="header">
+            <div class="header-text">
+                <h1>Keanu Niccolo Sison</h1>
+                <h2>AppSheet Developer and Process Automation Specialist</h2>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">0926-626-7336</div>
+                <div class="contact-item">ksison001@gmail.com</div>
+                <div class="contact-item">kytusdatasolutions</div>
+                <div class="contact-item">Barangka, Marikina City</div>
+            </div>
+        </header>
+        
+        <div class="content">
+            <div class="value-proposition">
+                <h3>Your Business Transformation Partner</h3>
+                <p>I turn complex business challenges into streamlined, automated solutions. Combining psychology-driven user insights with cutting-edge automation technology, I deliver measurable results that save time, reduce costs, and boost operational efficiency.</p>
+            </div>
+            
+            <section class="section">
+                <h2 class="section-title">Core Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Development</h4>
+                        <ul>
+                            <li>AppSheet (Expert Level) - Custom Business Apps</li>
+                            <li>Database Architecture & Design</li>
+                            <li>Process Automation Workflows</li>
+                            <li>User Experience Optimization</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Automation Platforms</h4>
+                        <ul>
+                            <li>Make.com - Advanced Integration</li>
+                            <li>N8N - Custom Workflow Automation</li>
+                            <li>Webhooks & API Integration</li>
+                            <li>System Integration Management</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Analytics & Visualization</h4>
+                        <ul>
+                            <li>Looker Studio - Interactive Dashboards</li>
+                            <li>Power BI - Business Intelligence</li>
+                            <li>Data Modeling & ETL Processes</li>
+                            <li>KPI Development & Tracking</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data Management</h4>
+                        <ul>
+                            <li>Database Design & Optimization</li>
+                            <li>Data Cleaning & Validation</li>
+                            <li>Google Sheets Advanced Functions</li>
+                            <li>Data Quality Assurance</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Professional Experience</h2>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>AppSheet Developer and Data Analytics</h3>
+                            <h4>FRF London</h4>
+                        </div>
+                        <div class="experience-date">Current</div>
+                    </div>
+                    <ul class="achievements">
+                        <li><strong>Built comprehensive sales management system</strong> covering complete order processing from data entry through invoice generation to logistics tracking and monitoring</li>
+                        <li><strong>Created fully automated inventory management system</strong> with complete in/out cycle automation, ensuring real-time stock accuracy and streamlined operations</li>
+                        <li><strong>Developed enterprise ticketing system</strong> for enhanced solution monitoring and addressing support needs, improving company-wide issue resolution efficiency</li>
+                        <li><strong>Designed custom project management tool</strong> providing user-friendly task tracking, monitoring, and delegation capabilities tailored to organizational workflows</li>
+                        <li><strong>Created comprehensive data analytics reporting</strong> across all business functions including sales management, ticketing, inventory revenue, and project management for informed decision-making</li>
+                        <li><strong>Currently connecting automation platforms</strong> to integrate all systems for seamless cross-functional processes and operational efficiency</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>Database & Process Automation Specialist</h3>
+                            <h4>Ateneo de Manila University</h4>
+                        </div>
+                        <div class="experience-date">2021 - Current</div>
+                    </div>
+                    <ul class="achievements">
+                        <li><strong>Oversee system development and maintenance</strong> for department-wide solutions, serving diverse client needs through innovative automation and database management</li>
+                        <li><strong>Drive data analytics initiatives</strong> to inform strategic decision-making, enabling sustainable innovation and improved client satisfaction metrics</li>
+                        <li><strong>Manage process improvement projects</strong> from conception to implementation, delivering effective solutions that optimize operational efficiency</li>
+                        <li><strong>Work closely with leadership teams</strong> to align technology solutions with organizational goals and strategic initiatives</li>
+                        <li><strong>Design robust database systems</strong> ensuring 100% data integrity and seamless integration across multiple platforms</li>
+                        <li><strong>Develop automated workflows</strong> reducing manual processing time by 80% and eliminating data inconsistencies</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
+                            <h3>HR Data Analytics Specialist</h3>
+                            <h4>ReadyMan Inc</h4>
+                        </div>
+                        <div class="experience-date">2017 - 2019</div>
+                    </div>
+                    <ul class="achievements">
+                        <li><strong>Improved HR operations</strong> through advanced data analytics, developing predictive models that improved recruitment success rates by 45%</li>
+                        <li><strong>Built comprehensive analytics dashboards</strong> providing real-time insights into HR KPIs, enabling executive-level strategic decision making</li>
+                        <li><strong>Enhanced talent acquisition processes</strong> using data-driven methodologies, reducing time-to-hire by 35% while improving candidate quality</li>
+                        <li><strong>Analyzed HR metrics and trends</strong> in detail, identifying opportunities for process automation and efficiency improvements</li>
+                        <li><strong>Created data visualization solutions</strong> that communicated complex HR insights to stakeholders across all organizational levels</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education">
+                    <h4>Bachelor of Science in Psychology (2012-2017)</h4>
+                    <p><strong>Trinity University of Asia</strong></p>
+                </div>
+            </section>
+            
+            <div class="highlight">
+                <h3>Ready to Transform Your Business?</h3>
+                <p>I don't just build solutions - I solve problems. Let's discuss how I can streamline your processes, automate your workflows, and unlock insights from your data to drive measurable business growth.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
