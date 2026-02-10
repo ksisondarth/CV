@@ -18,6 +18,160 @@
             background: #f9fafb;
             min-height: 100vh;
             padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        /* Dark theme styles */
+        body.dark-theme {
+            background: #0f1419;
+            color: #e5e7eb;
+        }
+
+        body.dark-theme .cv-container {
+            background: #1f2937;
+        }
+
+        body.dark-theme .value-proposition {
+            background: #374151;
+            color: #e5e7eb;
+            border-left-color: #60a5fa;
+        }
+
+        body.dark-theme .skill-category {
+            background: #374151;
+            border-left-color: #9ca3af;
+        }
+
+        body.dark-theme .skill-category:hover {
+            border-left-color: #60a5fa;
+        }
+
+        body.dark-theme .skill-category li {
+            color: #d1d5db;
+        }
+
+        body.dark-theme .experience-item {
+            background: #374151;
+            border-left-color: #9ca3af;
+        }
+
+        body.dark-theme .experience-item:hover {
+            border-left-color: #60a5fa;
+        }
+
+        body.dark-theme .achievements li {
+            color: #d1d5db;
+        }
+
+        body.dark-theme .portfolio-item {
+            background: #374151;
+            border-left-color: #60a5fa;
+        }
+
+        body.dark-theme .portfolio-item p {
+            color: #d1d5db;
+        }
+
+        body.dark-theme .portfolio-btn {
+            background: #60a5fa;
+            color: #111827;
+        }
+
+        body.dark-theme .portfolio-btn:hover {
+            background: #3b82f6;
+        }
+
+        body.dark-theme .education {
+            background: #374151;
+            color: #e5e7eb;
+            border-left-color: #60a5fa;
+        }
+
+        body.dark-theme .highlight {
+            background: #374151;
+            color: #e5e7eb;
+            border-left-color: #60a5fa;
+        }
+
+        body.dark-theme .section-title {
+            color: #f9fafb;
+            border-bottom-color: #4b5563;
+        }
+
+        body.dark-theme .skill-category h4,
+        body.dark-theme .experience-title h3,
+        body.dark-theme .portfolio-item h4 {
+            color: #f9fafb;
+        }
+
+        body.dark-theme .experience-title h4 {
+            color: #d1d5db;
+        }
+        
+        /* Theme Toggle Switch */
+        .theme-toggle {
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-theme .theme-toggle {
+            background: rgba(31, 41, 55, 0.9);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: #e5e7eb;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            border: none;
+            outline: none;
+        }
+
+        .toggle-switch.active {
+            background: #3b82f6;
+        }
+
+        .toggle-slider {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .toggle-switch.active .toggle-slider {
+            transform: translateX(30px);
+            background: #1f2937;
+            color: #60a5fa;
+        }
+
+        .toggle-slider::before {
+            content: '☀️';
+            font-size: 14px;
+        }
+
+        .toggle-switch.active .toggle-slider::before {
+            content: '🌙';
         }
         
         .cv-container {
@@ -27,6 +181,7 @@
             border-radius: 4px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
             overflow: hidden;
+            transition: all 0.3s ease;
         }
         
         .header {
@@ -122,6 +277,7 @@
             padding-bottom: 10px;
             margin-bottom: 25px;
             font-weight: 600;
+            transition: all 0.3s ease;
         }
 
         /* Portfolio Section Styles */
@@ -151,12 +307,14 @@
             font-size: 1.2em;
             margin-bottom: 15px;
             font-weight: 600;
+            transition: all 0.3s ease;
         }
 
         .portfolio-item p {
             color: #6b7280;
             line-height: 1.6;
             margin-bottom: 20px;
+            transition: all 0.3s ease;
         }
 
         .portfolio-btn {
@@ -210,6 +368,7 @@
             margin-bottom: 15px;
             font-size: 1.1em;
             font-weight: 600;
+            transition: all 0.3s ease;
         }
         
         .skill-category ul {
@@ -221,6 +380,7 @@
             color: #6b7280;
             position: relative;
             padding-left: 20px;
+            transition: all 0.3s ease;
         }
         
         .skill-category li::before {
@@ -264,12 +424,14 @@
             font-size: 1.2em;
             margin-bottom: 5px;
             font-weight: 600;
+            transition: all 0.3s ease;
         }
         
         .experience-title h4 {
             color: #6b7280;
             font-size: 1em;
             font-weight: 500;
+            transition: all 0.3s ease;
         }
         
         .experience-date {
@@ -292,6 +454,7 @@
             line-height: 1.6;
             position: relative;
             padding-left: 20px;
+            transition: all 0.3s ease;
         }
         
         .achievements li::before {
@@ -343,6 +506,11 @@
         }
         
         @media (max-width: 768px) {
+            .theme-toggle {
+                top: 20px;
+                right: 20px;
+            }
+
             .header {
                 flex-direction: column;
                 text-align: center;
@@ -419,6 +587,13 @@
     </style>
 </head>
 <body>
+    <!-- Theme Toggle Switch -->
+    <div class="theme-toggle">
+        <button class="toggle-switch" id="themeToggle">
+            <div class="toggle-slider"></div>
+        </button>
+    </div>
+
     <div class="cv-container">
         <header class="header">
             <img src="https://media.orderchop.cloud/file/Sherwin/kean/Untitled-design-2025-09-06T101057.088.png" 
@@ -451,7 +626,7 @@
                     <div class="portfolio-item">
                         <h4>Project Management Tool</h4>
                         <p>Comprehensive project tracking and management system built with AppSheet. Features task assignment, progress monitoring, deadline management, and team collaboration tools designed to streamline project workflows and improve productivity.</p>
-                        <a href="https://appsheet.com/start/c334d061-def1-4787-bdab-5d088b5d28fd" 
+                        <a href="https://www.appsheet.com/start/c334d061-def1-4787-bdab-5d088b5d28fd" 
                            target="_blank" 
                            class="portfolio-btn">View Project</a>
                     </div>
@@ -571,5 +746,30 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-theme');
+            themeToggle.classList.add('active');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            themeToggle.classList.toggle('active');
+            
+            // Save theme preference
+            if (body.classList.contains('dark-theme')) {
+                localStorage.setItem('theme', 'dark');
+            } else {
+                localStorage.setItem('theme', 'light');
+            }
+        });
+    </script>
 </body>
 </html>
