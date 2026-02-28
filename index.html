@@ -1239,6 +1239,8 @@
                 color: black !important;
                 padding: 0 !important;
                 font-size: 12px;
+                line-height: 1.4;
+                font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             }
 
             .theme-toggle,
@@ -1253,15 +1255,60 @@
                 box-shadow: none !important;
                 border: none !important;
                 border-radius: 0 !important;
+                background: white !important;
             }
 
+            /* PDF Header - Clean and compact */
             .header {
-                background: #1E4D3F !important;
-                color: white !important;
-                padding: 30px !important;
+                background: white !important;
+                color: black !important;
+                padding: 20px 40px !important;
                 page-break-inside: avoid;
+                border-bottom: 2px solid #1E4D3F !important;
+                display: block !important;
+                text-align: center !important;
             }
 
+            .header .profile-picture {
+                display: none !important;
+            }
+
+            .header-content {
+                text-align: center !important;
+            }
+
+            .header-text h1 {
+                font-size: 2.2em !important;
+                color: #1E4D3F !important;
+                margin-bottom: 8px !important;
+                font-weight: 700 !important;
+            }
+
+            .header-text h2 {
+                font-size: 1.1em !important;
+                color: #666 !important;
+                margin-bottom: 15px !important;
+                font-weight: 400 !important;
+            }
+
+            .contact-info {
+                display: flex !important;
+                justify-content: center !important;
+                gap: 30px !important;
+                flex-wrap: wrap !important;
+                margin-top: 15px !important;
+            }
+
+            .contact-item {
+                background: none !important;
+                border: none !important;
+                padding: 0 !important;
+                border-radius: 0 !important;
+                font-size: 0.9em !important;
+                color: #333 !important;
+            }
+
+            /* PDF Layout - Single column */
             .desktop-layout,
             .mobile-layout {
                 display: block !important;
@@ -1272,53 +1319,259 @@
             }
 
             .main-content {
-                padding: 20px !important;
+                padding: 25px 40px !important;
                 background: white !important;
             }
 
-            .value-proposition,
-            .portfolio-item,
-            .experience-item,
-            .skill-category {
+            /* PDF Skills Section - Inline format */
+            .skills-section-pdf {
+                display: block !important;
+                margin-bottom: 25px !important;
+                page-break-inside: avoid;
+            }
+
+            .skills-inline {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                gap: 20px !important;
+                margin-top: 10px !important;
+            }
+
+            .skill-category-pdf {
+                flex: 1 !important;
+                min-width: 200px !important;
+            }
+
+            .skill-category-pdf h4 {
+                color: #1E4D3F !important;
+                font-weight: 700 !important;
+                font-size: 0.9em !important;
+                margin-bottom: 8px !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.5px !important;
+            }
+
+            .skill-category-pdf ul {
+                list-style: none !important;
+                padding: 0 !important;
+            }
+
+            .skill-category-pdf li {
+                font-size: 0.8em !important;
+                color: #555 !important;
+                margin-bottom: 3px !important;
+                padding: 0 !important;
+                font-weight: 400 !important;
+            }
+
+            .skill-category-pdf li::before {
+                content: "• " !important;
+                color: #1E4D3F !important;
+            }
+
+            /* PDF Value Proposition */
+            .value-proposition {
+                background: #f8f9fa !important;
+                border: 1px solid #e9ecef !important;
+                border-left: 4px solid #1E4D3F !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+                margin-bottom: 25px !important;
+                padding: 20px !important;
+                border-radius: 0 !important;
+            }
+
+            .value-proposition h3 {
+                color: #1E4D3F !important;
+                font-size: 1.2em !important;
+                margin-bottom: 10px !important;
+                font-weight: 700 !important;
+            }
+
+            .value-proposition p {
+                color: #555 !important;
+                font-size: 0.9em !important;
+                line-height: 1.5 !important;
+                font-weight: 400 !important;
+            }
+
+            /* PDF Section Titles */
+            .section-title {
+                color: #1E4D3F !important;
+                font-size: 1.3em !important;
+                font-weight: 700 !important;
+                margin-bottom: 15px !important;
+                padding-bottom: 8px !important;
+                border-bottom: 2px solid #1E4D3F !important;
+                text-transform: uppercase !important;
+                letter-spacing: 1px !important;
+            }
+
+            .section-title::after {
+                display: none !important;
+            }
+
+            /* PDF Portfolio Section */
+            .portfolio-grid {
+                display: block !important;
+                gap: 15px !important;
+            }
+
+            .portfolio-item {
                 background: white !important;
-                border: 1px solid #e2e8f0 !important;
+                border: 1px solid #ddd !important;
+                border-left: 4px solid #1E4D3F !important;
                 box-shadow: none !important;
                 page-break-inside: avoid;
                 margin-bottom: 15px !important;
-                padding: 20px !important;
+                padding: 15px !important;
+                border-radius: 0 !important;
+                height: auto !important;
+                position: static !important;
             }
 
-            .section-title {
+            .portfolio-item.image-card .portfolio-overlay {
+                position: static !important;
+                opacity: 1 !important;
+                background: none !important;
+                color: black !important;
+                padding: 0 !important;
+                display: block !important;
+            }
+
+            .portfolio-item h4,
+            .portfolio-item.image-card .portfolio-overlay h4 {
                 color: #1E4D3F !important;
-                font-size: 1.4em !important;
-                margin-bottom: 15px !important;
+                font-size: 1em !important;
+                font-weight: 700 !important;
+                margin-bottom: 8px !important;
             }
 
-            .portfolio-grid,
-            .skills-grid {
-                grid-template-columns: 1fr !important;
-                gap: 15px !important;
+            .portfolio-item p,
+            .portfolio-item.image-card .portfolio-overlay p {
+                color: #555 !important;
+                font-size: 0.85em !important;
+                line-height: 1.4 !important;
+                margin-bottom: 10px !important;
+                font-weight: 400 !important;
+            }
+
+            .portfolio-btn {
+                display: inline-block !important;
+                background: #1E4D3F !important;
+                color: white !important;
+                padding: 6px 12px !important;
+                border-radius: 3px !important;
+                font-size: 0.75em !important;
+                font-weight: 600 !important;
+                text-decoration: none !important;
+                border: none !important;
+            }
+
+            /* PDF Experience Section */
+            .experience-grid {
+                display: block !important;
+                gap: 0 !important;
+            }
+
+            .experience-item {
+                background: white !important;
+                border: 1px solid #ddd !important;
+                border-left: 4px solid #1E4D3F !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+                margin-bottom: 20px !important;
+                padding: 15px !important;
+                border-radius: 0 !important;
+            }
+
+            .experience-header {
+                display: flex !important;
+                justify-content: space-between !important;
+                align-items: flex-start !important;
+                margin-bottom: 12px !important;
+            }
+
+            .experience-title h3 {
+                color: #1E4D3F !important;
+                font-size: 1em !important;
+                font-weight: 700 !important;
+                margin-bottom: 4px !important;
+            }
+
+            .experience-title h4 {
+                color: #666 !important;
+                font-size: 0.9em !important;
+                font-weight: 400 !important;
             }
 
             .experience-date {
                 background: #1E4D3F !important;
                 color: white !important;
+                padding: 4px 10px !important;
+                border-radius: 3px !important;
+                font-size: 0.75em !important;
+                font-weight: 600 !important;
             }
 
-            .portfolio-btn {
-                background: #1E4D3F !important;
-                color: white !important;
+            .achievements {
+                list-style: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
             }
 
+            .achievements li {
+                color: #555 !important;
+                font-size: 0.85em !important;
+                line-height: 1.4 !important;
+                margin-bottom: 6px !important;
+                padding-left: 15px !important;
+                font-weight: 400 !important;
+                position: relative !important;
+            }
+
+            .achievements li::before {
+                content: "•" !important;
+                color: #1E4D3F !important;
+                position: absolute !important;
+                left: 0 !important;
+                top: 0 !important;
+            }
+
+            /* PDF Call to Action */
             .highlight {
                 background: #1E4D3F !important;
                 color: white !important;
+                padding: 20px !important;
+                border-radius: 0 !important;
+                text-align: center !important;
                 border: none !important;
+                margin-top: 25px !important;
+                page-break-inside: avoid;
+            }
+
+            .highlight h3 {
+                font-size: 1.1em !important;
+                margin-bottom: 10px !important;
+                font-weight: 700 !important;
+            }
+
+            .highlight p {
+                font-size: 0.9em !important;
+                line-height: 1.4 !important;
+                font-weight: 400 !important;
+            }
+
+            /* Page breaks */
+            .section {
+                page-break-inside: avoid;
+                margin-bottom: 25px !important;
             }
 
             * {
                 -webkit-print-color-adjust: exact !important;
                 color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
         }
     </style>
@@ -1344,14 +1597,14 @@
         </button>
         <div class="contact-options" id="contactOptions">
             <a href="mailto:ksison001@gmail.com" class="contact-option">
-                <span class="contact-icon">✉︎</span>
+                <span class="contact-icon">Email</span>
                 <div>
                     <div>Email</div>
                     <div class="contact-text">ksison001@gmail.com</div>
                 </div>
             </a>
             <a href="https://wa.me/639266267336" target="_blank" class="contact-option">
-                <span class="contact-icon">🕻</span>
+                <span class="contact-icon">WhatsApp</span>
                 <div>
                     <div>WhatsApp</div>
                     <div class="contact-text">0926-626-7336</div>
@@ -1427,6 +1680,49 @@
                 <div class="value-proposition">
                     <h3>Your Business Transformation Partner</h3>
                     <p>I transform business operations through custom system development and intelligent automation. By designing scalable solutions and seamless integrations, I help organizations eliminate bottlenecks, reduce manual overhead, and achieve measurable productivity gains that directly impact their bottom line.</p>
+                </div>
+
+                <!-- PDF-only Skills Section -->
+                <div class="skills-section-pdf" style="display: none;">
+                    <h2 class="section-title">Core Expertise</h2>
+                    <div class="skills-inline">
+                        <div class="skill-category-pdf">
+                            <h4>Development</h4>
+                            <ul>
+                                <li>AppSheet (Expert Level)</li>
+                                <li>Database Architecture</li>
+                                <li>Process Automation</li>
+                                <li>UX Optimization</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category-pdf">
+                            <h4>Automation</h4>
+                            <ul>
+                                <li>Make.com Advanced</li>
+                                <li>N8N Workflows</li>
+                                <li>API Integration</li>
+                                <li>System Integration</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category-pdf">
+                            <h4>Analytics</h4>
+                            <ul>
+                                <li>Looker Studio</li>
+                                <li>Power BI</li>
+                                <li>Data Modeling</li>
+                                <li>KPI Development</li>
+                            </ul>
+                        </div>
+                        <div class="skill-category-pdf">
+                            <h4>Data Management</h4>
+                            <ul>
+                                <li>Database Design</li>
+                                <li>Data Cleaning</li>
+                                <li>Google Sheets</li>
+                                <li>Quality Assurance</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 <section class="section">
@@ -1795,4 +2091,3 @@
     </script>
 </body>
 </html>
-
