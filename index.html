@@ -100,6 +100,18 @@
             font-weight: 400;
         }
 
+        body.dark-theme .portfolio-item.image-card .portfolio-overlay {
+            background: rgba(26, 46, 40, 0.95);
+        }
+
+        body.dark-theme .portfolio-item.image-card .portfolio-overlay h4 {
+            color: #ffffff;
+        }
+
+        body.dark-theme .portfolio-item.image-card .portfolio-overlay p {
+            color: #e5e7eb;
+        }
+
         body.dark-theme .portfolio-item {
             background: #1a2e28;
             border: 1px solid #52a380;
@@ -333,7 +345,7 @@
         }
 
         .toggle-switch.active .toggle-slider::before {
-            content: '⏾';
+            content: '🌙';
         }
 
         /* PDF Download Widget */
@@ -500,7 +512,7 @@
         }
         
         .cv-container {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             background: white;
             border-radius: 15px;
@@ -770,18 +782,61 @@
         /* Portfolio Section Styles */
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
         .portfolio-item {
             background: #f9fafb;
-            padding: 30px;
             border-radius: 15px;
             transition: all 0.3s ease;
             box-shadow: 0 8px 25px rgba(0,0,0,0.06);
             border: 1px solid #e2e8f0;
             border-left: 4px solid #1E4D3F;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-item.image-card {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 0;
+        }
+
+        .portfolio-item.image-card .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 77, 63, 0.95);
+            color: white;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .portfolio-item.image-card:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-item.image-card .portfolio-overlay h4 {
+            color: white;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .portfolio-item.image-card .portfolio-overlay p {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 400;
         }
 
         .portfolio-item:hover {
@@ -819,6 +874,8 @@
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 12px rgba(30, 77, 63, 0.3);
+            width: auto;
+            text-align: center;
         }
 
         .portfolio-btn:hover {
@@ -1245,15 +1302,15 @@
             <span>Contact Me</span>
         </button>
         <div class="contact-options" id="contactOptions">
-            <a href="mailto:ksison001@gmail.com" class="contact-option">
-                <span class="contact-icon">✉︎</span>
+            <a href="/cdn-cgi/l/email-protection#fd968e948e9293cdcdccbd9a909c9491d39e9290" class="contact-option">
+                <span class="contact-icon">Email</span>
                 <div>
                     <div>Email</div>
-                    <div class="contact-text">ksison001@gmail.com</div>
+                    <div class="contact-text"><span class="__cf_email__" data-cfemail="99f2eaf0eaf6f7a9a9a8d9fef4f8f0f5b7faf6f4">[email&#160;protected]</span></div>
                 </div>
             </a>
             <a href="https://wa.me/639266267336" target="_blank" class="contact-option">
-                <span class="contact-icon">🕻</span>
+                <span class="contact-icon">WhatsApp</span>
                 <div>
                     <div>WhatsApp</div>
                     <div class="contact-text">0926-626-7336</div>
@@ -1274,7 +1331,7 @@
                 </div>
                 <div class="contact-info">
                     <a href="tel:+63926-626-7336" class="contact-item clickable" data-tooltip="Call / Text me">0926-626-7336</a>
-                    <a href="mailto:ksison001@gmail.com" class="contact-item clickable" data-tooltip="Send me an email">ksison001@gmail.com</a>
+                    <a href="/cdn-cgi/l/email-protection#167d657f65797826262756717b777f7a3875797b" class="contact-item clickable" data-tooltip="Send me an email"><span class="__cf_email__" data-cfemail="bbd0c8d2c8d4d58b8b8afbdcd6dad2d795d8d4d6">[email&#160;protected]</span></a>
                     <div class="contact-item">kytusdatasolutions</div>
                     <div class="contact-item">Barangka, Marikina City</div>
                 </div>
@@ -1334,20 +1391,32 @@
                 <section class="section">
                     <h2 class="section-title">Sample Works</h2>
                     <div class="portfolio-grid">
-                        <div class="portfolio-item">
-                            <h4>Project Management Tool</h4>
-                            <p>Comprehensive project tracking and management system built with AppSheet. Features task assignment, progress monitoring, deadline management, and team collaboration tools.</p>
-                            <a href="https://appsheet.com/start/c334d061-def1-4787-bdab-5d088b5d28fd" 
-                               target="_blank" 
-                               class="portfolio-btn">View Project</a>
+                        <div class="portfolio-item image-card" style="background-image: url('https://freevacationvouchers.com/wp-content/uploads/2026/02/Custom-Project-Management-Tool.png');">
+                            <div class="portfolio-overlay">
+                                <h4>Project Management Tool</h4>
+                                <p>Comprehensive project tracking and management system built with AppSheet. Features task assignment, progress monitoring, deadline management, and team collaboration tools.</p>
+                                <a href="https://appsheet.com/start/c334d061-def1-4787-bdab-5d088b5d28fd" 
+                                   target="_blank" 
+                                   class="portfolio-btn">View Project</a>
+                            </div>
                         </div>
                         
-                        <div class="portfolio-item">
-                            <h4>Lead Management Tool</h4>
-                            <p>Advanced CRM solution for lead tracking and management. Includes lead scoring, automated follow-up workflows, conversion tracking, and detailed analytics.</p>
-                            <a href="https://appsheet.com/start/c1b48401-ad92-478b-98de-5adb9daa7317" 
-                               target="_blank" 
-                               class="portfolio-btn">View Project</a>
+                        <div class="portfolio-item image-card" style="background-image: url('https://freevacationvouchers.com/wp-content/uploads/2026/02/Lead-Management-System.png');">
+                            <div class="portfolio-overlay">
+                                <h4>Lead Management Tool</h4>
+                                <p>Advanced CRM solution for lead tracking and management. Includes lead scoring, automated follow-up workflows, conversion tracking, and detailed analytics.</p>
+                                <a href="https://appsheet.com/start/c1b48401-ad92-478b-98de-5adb9daa7317" 
+                                   target="_blank" 
+                                   class="portfolio-btn">View Project</a>
+                            </div>
+                        </div>
+
+                        <div class="portfolio-item image-card" style="background-image: url('https://freevacationvouchers.com/wp-content/uploads/2026/02/Appsheet-Portfolio.png');">
+                            <div class="portfolio-overlay">
+                                <h4>Restaurant Order Management</h4>
+                                <p>Complete POS system for restaurant operations. Features menu item selection, quantity management, automatic total calculation, and streamlined order processing workflow.</p>
+                                <a href="#" target="_blank" class="portfolio-btn">View Project</a>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -1358,17 +1427,32 @@
                     <div class="experience-item">
                         <div class="experience-header">
                             <div class="experience-title">
+                                <h3>Website and AppSheet Developer</h3>
+                                <h4>Elite IP</h4>
+                            </div>
+                            <div class="experience-date">Consultant</div>
+                        </div>
+                        <ul class="achievements">
+                            <li>Developed complete website with optimized user process flows</li>
+                            <li>Built lead management system with vendor tracking integration</li>
+                            <li>Created CRM solution with advanced analytics dashboard</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div class="experience-title">
                                 <h3>AppSheet Developer and Data Analytics</h3>
                                 <h4>FRF</h4>
                             </div>
                             <div class="experience-date">Consultant</div>
                         </div>
                         <ul class="achievements">
-                            <li><strong>Built comprehensive sales management system</strong> covering complete order processing from data entry through invoice generation to logistics tracking and monitoring</li>
-                            <li><strong>Created fully automated inventory management system</strong> with complete in/out cycle automation, ensuring real-time stock accuracy and streamlined operations</li>
-                            <li><strong>Developed enterprise ticketing system</strong> for enhanced solution monitoring and addressing support needs, improving company-wide issue resolution efficiency</li>
-                            <li><strong>Designed custom project management tool</strong> providing user-friendly task tracking, monitoring, and delegation capabilities tailored to organizational workflows</li>
-                            <li><strong>Created comprehensive data analytics reporting</strong> across all business functions including sales management, ticketing, inventory revenue, and project management for informed decision-making</li>
+                            <li>Built comprehensive sales management system</li>
+                            <li>Created fully automated inventory management</li>
+                            <li>Developed enterprise ticketing system</li>
+                            <li>Designed custom project management tool</li>
+                            <li>Implemented analytics reporting across all functions</li>
                         </ul>
                     </div>
                     
@@ -1381,10 +1465,10 @@
                             <div class="experience-date">2021 - Current</div>
                         </div>
                         <ul class="achievements">
-                            <li><strong>Oversee system development and maintenance</strong> for department-wide solutions, serving diverse client needs through innovative automation and database management</li>
-                            <li><strong>Drive data analytics initiatives</strong> to inform strategic decision-making, enabling sustainable innovation and improved client satisfaction metrics</li>
-                            <li><strong>Manage process improvement projects</strong> from conception to implementation, delivering effective solutions that optimize operational efficiency</li>
-                            <li><strong>Design robust database systems</strong> ensuring 100% data integrity and seamless integration across multiple platforms</li>
+                            <li>Lead system development and maintenance</li>
+                            <li>Drive data analytics for strategic decisions</li>
+                            <li>Manage end-to-end process improvement projects</li>
+                            <li>Design enterprise database systems</li>
                         </ul>
                     </div>
                     
@@ -1397,16 +1481,16 @@
                             <div class="experience-date">2017 - 2019</div>
                         </div>
                         <ul class="achievements">
-                            <li><strong>Improved HR operations</strong> through advanced data analytics, developing predictive models that improved recruitment success rate</li>
-                            <li><strong>Built comprehensive analytics dashboards</strong> providing real-time insights into HR KPIs, enabling executive-level strategic decision making</li>
-                            <li><strong>Enhanced talent acquisition processes</strong> using data-driven methodologies, reducing time-to-hire by 35% while improving candidate quality</li>
+                            <li>Transformed HR operations through advanced analytics</li>
+                            <li>Built comprehensive KPI dashboards</li>
+                            <li>Reduced hiring time by 35% through process optimization</li>
                         </ul>
                     </div>
                 </section>
                 
                 <div class="highlight">
-                    <h3>Ready to Transform Your Business?</h3>
-                    <p>I don't just build solutions - I solve problems. Let's discuss how I can streamline your processes, automate your workflows, and unlock insights from your data to drive measurable business growth.</p>
+                    <h3>Need Systems That Actually Work?</h3>
+                    <p>I solve business problems with practical solutions. Let's discuss your specific challenges and build something that fits your workflow.</p>
                 </div>
             </main>
         </div>
@@ -1421,20 +1505,32 @@
             <section class="section">
                 <h2 class="section-title">Sample Works</h2>
                 <div class="portfolio-grid">
-                    <div class="portfolio-item">
-                        <h4>Project Management Tool</h4>
-                        <p>Comprehensive project tracking and management system built with AppSheet. Features task assignment, progress monitoring, deadline management, and team collaboration tools designed to streamline project workflows and improve productivity.</p>
-                        <a href="https://appsheet.com/start/c334d061-def1-4787-bdab-5d088b5d28fd" 
-                           target="_blank" 
-                           class="portfolio-btn">View Project</a>
+                    <div class="portfolio-item image-card" style="background-image: url('https://freevacationvouchers.com/wp-content/uploads/2026/02/Custom-Project-Management-Tool.png');">
+                        <div class="portfolio-overlay">
+                            <h4>Project Management Tool</h4>
+                            <p>Comprehensive project tracking and management system built with AppSheet. Features task assignment, progress monitoring, deadline management, and team collaboration tools.</p>
+                            <a href="https://appsheet.com/start/c334d061-def1-4787-bdab-5d088b5d28fd" 
+                               target="_blank" 
+                               class="portfolio-btn">View Project</a>
+                        </div>
                     </div>
                     
-                    <div class="portfolio-item">
-                        <h4>Lead Management Tool</h4>
-                        <p>Advanced CRM solution for lead tracking and management. Includes lead scoring, automated follow-up workflows, conversion tracking, and detailed analytics to optimize sales processes and improve conversion rates.</p>
-                        <a href="https://appsheet.com/start/c1b48401-ad92-478b-98de-5adb9daa7317" 
-                           target="_blank" 
-                           class="portfolio-btn">View Project</a>
+                    <div class="portfolio-item image-card" style="background-image: url('https://freevacationvouchers.com/wp-content/uploads/2026/02/Lead-Management-System.png');">
+                        <div class="portfolio-overlay">
+                            <h4>Lead Management Tool</h4>
+                            <p>Advanced CRM solution for lead tracking and management. Includes lead scoring, automated follow-up workflows, conversion tracking, and detailed analytics.</p>
+                            <a href="https://appsheet.com/start/c1b48401-ad92-478b-98de-5adb9daa7317" 
+                               target="_blank" 
+                               class="portfolio-btn">View Project</a>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item image-card" style="background-image: url('https://freevacationvouchers.com/wp-content/uploads/2026/02/Appsheet-Portfolio.png');">
+                        <div class="portfolio-overlay">
+                            <h4>Restaurant Order Management</h4>
+                            <p>Complete POS system for restaurant operations. Features menu item selection, quantity management, automatic total calculation, and streamlined order processing workflow.</p>
+                            <a href="#" target="_blank" class="portfolio-btn">View Project</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -1487,18 +1583,32 @@
                 <div class="experience-item">
                     <div class="experience-header">
                         <div class="experience-title">
+                            <h3>Website and AppSheet Developer</h3>
+                            <h4>Elite IP</h4>
+                        </div>
+                        <div class="experience-date">Consultant</div>
+                    </div>
+                    <ul class="achievements">
+                        <li>Developed complete website with optimized user process flows</li>
+                        <li>Built lead management system with vendor tracking integration</li>
+                        <li>Created CRM solution with advanced analytics dashboard</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-title">
                             <h3>AppSheet Developer and Data Analytics</h3>
                             <h4>FRF</h4>
                         </div>
                         <div class="experience-date">Consultant</div>
                     </div>
                     <ul class="achievements">
-                        <li><strong>Built comprehensive sales management system</strong> covering complete order processing from data entry through invoice generation to logistics tracking and monitoring</li>
-                        <li><strong>Created fully automated inventory management system</strong> with complete in/out cycle automation, ensuring real-time stock accuracy and streamlined operations</li>
-                        <li><strong>Developed enterprise ticketing system</strong> for enhanced solution monitoring and addressing support needs, improving company-wide issue resolution efficiency</li>
-                        <li><strong>Designed custom project management tool</strong> providing user-friendly task tracking, monitoring, and delegation capabilities tailored to organizational workflows</li>
-                        <li><strong>Created comprehensive data analytics reporting</strong> across all business functions including sales management, ticketing, inventory revenue, and project management for informed decision-making</li>
-                        <li><strong>Currently connecting automation platforms</strong> to integrate all systems for seamless cross-functional processes and operational efficiency</li>
+                        <li>Built comprehensive sales management system</li>
+                        <li>Created fully automated inventory management</li>
+                        <li>Developed enterprise ticketing system</li>
+                        <li>Designed custom project management tool</li>
+                        <li>Implemented analytics reporting across all functions</li>
                     </ul>
                 </div>
                 
@@ -1511,12 +1621,10 @@
                         <div class="experience-date">2021 - Current</div>
                     </div>
                     <ul class="achievements">
-                        <li><strong>Oversee system development and maintenance</strong> for department-wide solutions, serving diverse client needs through innovative automation and database management</li>
-                        <li><strong>Drive data analytics initiatives</strong> to inform strategic decision-making, enabling sustainable innovation and improved client satisfaction metrics</li>
-                        <li><strong>Manage process improvement projects</strong> from conception to implementation, delivering effective solutions that optimize operational efficiency</li>
-                        <li><strong>Work closely with leadership teams</strong> to align technology solutions with organizational goals and strategic initiatives</li>
-                        <li><strong>Design robust database systems</strong> ensuring 100% data integrity and seamless integration across multiple platforms</li>
-                        <li><strong>Develop automated workflows</strong> reducing manual processing time and eliminating data inconsistencies</li>
+                        <li>Lead system development and maintenance</li>
+                        <li>Drive data analytics for strategic decisions</li>
+                        <li>Manage end-to-end process improvement projects</li>
+                        <li>Design enterprise database systems</li>
                     </ul>
                 </div>
                 
@@ -1529,23 +1637,21 @@
                         <div class="experience-date">2017 - 2019</div>
                     </div>
                     <ul class="achievements">
-                        <li><strong>Improved HR operations</strong> through advanced data analytics, developing predictive models that improved recruitment success rate</li>
-                        <li><strong>Built comprehensive analytics dashboards</strong> providing real-time insights into HR KPIs, enabling executive-level strategic decision making</li>
-                        <li><strong>Enhanced talent acquisition processes</strong> using data-driven methodologies, reducing time-to-hire by 35% while improving candidate quality</li>
-                        <li><strong>Analyzed HR metrics and trends</strong> in detail, identifying opportunities for process automation and efficiency improvements</li>
-                        <li><strong>Created data visualization solutions</strong> that communicated complex HR insights to stakeholders across all organizational levels</li>
+                        <li>Transformed HR operations through advanced analytics</li>
+                        <li>Built comprehensive KPI dashboards</li>
+                        <li>Reduced hiring time by 35% through process optimization</li>
                     </ul>
                 </div>
             </section>
             
             <div class="highlight">
-                <h3>Ready to Transform Your Business?</h3>
-                <p>I don't just build solutions, I solve problems. Let's discuss how I can streamline your processes, automate your workflows, and unlock insights from your data to drive measurable business growth.</p>
+                <h3>Need Systems That Actually Work?</h3>
+                <p>I solve business problems with practical solutions. Let's discuss your specific challenges and build something that fits your workflow.</p>
             </div>
         </div>
     </div>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Theme toggle functionality
         const themeToggle = document.getElementById('themeToggle');
         const body = document.body;
@@ -1631,18 +1737,4 @@
             };
             
             // Generate PDF
-            html2pdf().set(opt).from(document.querySelector('.cv-container')).save().then(() => {
-                // Restore widgets after PDF generation
-                widgets.forEach(widget => widget.style.display = '');
-                
-                // Restore dark theme if it was active
-                if (isDarkTheme) {
-                    body.classList.add('dark-theme');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
-
-
+            html2pdf().set(opt).from(document.querySelector('.cv-container')).save
