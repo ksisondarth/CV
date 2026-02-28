@@ -817,8 +817,10 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: flex-start;
             opacity: 0;
             transition: all 0.3s ease;
+            text-align: left;
         }
 
         .portfolio-item.image-card:hover .portfolio-overlay {
@@ -830,6 +832,8 @@
             font-size: 1.3em;
             margin-bottom: 15px;
             font-weight: 700;
+            width: 100%;
+            text-align: left;
         }
 
         .portfolio-item.image-card .portfolio-overlay p {
@@ -837,6 +841,12 @@
             line-height: 1.6;
             margin-bottom: 20px;
             font-weight: 400;
+            width: 100%;
+            text-align: left;
+        }
+
+        .portfolio-item.image-card .portfolio-overlay .portfolio-btn {
+            align-self: flex-start;
         }
 
         .portfolio-item:hover {
@@ -918,6 +928,12 @@
             align-items: flex-start;
             margin-bottom: 18px;
             flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .experience-title {
+            flex: 1;
+            min-width: 200px;
         }
         
         .experience-title h3 {
@@ -933,6 +949,7 @@
             font-size: 1.05em;
             font-weight: 400;
             transition: all 0.3s ease;
+            margin: 0;
         }
         
         .experience-date {
@@ -943,11 +960,14 @@
             font-size: 0.85em;
             font-weight: 600;
             box-shadow: 0 4px 12px rgba(30, 77, 63, 0.3);
+            white-space: nowrap;
+            align-self: flex-start;
         }
         
         .achievements {
             list-style: none;
             margin-top: 15px;
+            padding-left: 0;
         }
         
         .achievements li {
@@ -958,6 +978,7 @@
             padding-left: 20px;
             transition: all 0.3s ease;
             font-weight: 400;
+            margin-bottom: 5px;
         }
         
         .achievements li::before {
@@ -1125,6 +1146,20 @@
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 10px;
+                margin-bottom: 15px;
+            }
+
+            .experience-date {
+                align-self: flex-start;
+                margin-top: 5px;
+            }
+
+            .experience-grid {
+                gap: 20px;
+            }
+
+            .experience-item {
+                margin-bottom: 0;
             }
 
             .portfolio-grid {
@@ -1308,15 +1343,15 @@
             <span>Contact Me</span>
         </button>
         <div class="contact-options" id="contactOptions">
-            <a href="/cdn-cgi/l/email-protection#fd968e948e9293cdcdccbd9a909c9491d39e9290" class="contact-option">
-                <span class="contact-icon">✉</span>
+            <a href="mailto:ksison001@gmail.com" class="contact-option">
+                <span class="contact-icon">Email</span>
                 <div>
                     <div>Email</div>
-                    <div class="contact-text"><span class="__cf_email__" data-cfemail="99f2eaf0eaf6f7a9a9a8d9fef4f8f0f5b7faf6f4">[email&#160;protected]</span></div>
+                    <div class="contact-text">ksison001@gmail.com</div>
                 </div>
             </a>
             <a href="https://wa.me/639266267336" target="_blank" class="contact-option">
-                <span class="contact-icon">🕻</span>
+                <span class="contact-icon">WhatsApp</span>
                 <div>
                     <div>WhatsApp</div>
                     <div class="contact-text">0926-626-7336</div>
@@ -1337,7 +1372,7 @@
                 </div>
                 <div class="contact-info">
                     <a href="tel:+63926-626-7336" class="contact-item clickable" data-tooltip="Call / Text me">0926-626-7336</a>
-                    <a href="/cdn-cgi/l/email-protection#167d657f65797826262756717b777f7a3875797b" class="contact-item clickable" data-tooltip="Send me an email"><span class="__cf_email__" data-cfemail="bbd0c8d2c8d4d58b8b8afbdcd6dad2d795d8d4d6">[email&#160;protected]</span></a>
+                    <a href="mailto:ksison001@gmail.com" class="contact-item clickable" data-tooltip="Send me an email">ksison001@gmail.com</a>
                     <div class="contact-item">kytusdatasolutions</div>
                     <div class="contact-item">Barangka, Marikina City</div>
                 </div>
